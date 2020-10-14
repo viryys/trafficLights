@@ -24,12 +24,14 @@ class TrafficLightsViewController: UIViewController {
         yellowView.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.5)
         greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
         
+        triggerButton.layer.cornerRadius = 20
+        triggerButton.setTitle("START", for: .normal)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         redView.layer.cornerRadius = redView.frame.size.height / 2
         yellowView.layer.cornerRadius = yellowView.frame.size.width / 2
         greenView.layer.cornerRadius = greenView.frame.size.width / 2
-        
-        triggerButton.layer.cornerRadius = 20
-        triggerButton.setTitle("START", for: .normal)
     }
 
     @IBAction func clickButton(_ sender: Any) {
