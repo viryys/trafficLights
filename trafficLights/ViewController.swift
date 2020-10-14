@@ -37,22 +37,23 @@ class TrafficLightsViewController: UIViewController {
             redView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.5)
             UIView.animate(withDuration: 0.3, animations: {
               self.yellowView.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 1)
+              self.greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
             })
-            greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
+            
             print("горит красный")
         } else if (yellowView.backgroundColor == UIColor.yellow) {
             print("горит желтый")
             redView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.5)
-            yellowView.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.5)
             UIView.animate(withDuration: 0.3, animations: {
+              self.yellowView.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.5)
               self.greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
             })
         } else if (greenView.backgroundColor == UIColor.green) {
             print("горит зеленый")
             UIView.animate(withDuration: 0.3, animations: {
               self.redView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+              self.yellowView.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.5)
             })
-            yellowView.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.5)
             greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
         } else {
             UIView.animate(withDuration: 0.3, animations: {
