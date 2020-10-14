@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,40 +13,35 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TrafficLightsViewController" customModule="trafficLights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="center" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-i2-Red">
-                                <rect key="frame" x="157" y="64" width="100" height="340"/>
+                                <rect key="frame" x="110" y="20" width="100" height="340"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0up-0L-7ku">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="5e3-Zv-9yB"/>
-                                            <constraint firstAttribute="height" constant="100" id="RBi-au-tlj"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIF-Ma-ESn">
                                         <rect key="frame" x="0.0" y="120" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="csA-b5-T9F"/>
-                                            <constraint firstAttribute="width" constant="100" id="hoN-Sf-4mo"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iG0-Gi-Qje">
                                         <rect key="frame" x="0.0" y="240" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Yc8-kd-mPt"/>
-                                            <constraint firstAttribute="width" constant="100" id="za6-Tm-UsW"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="gIF-Ma-ESn" firstAttribute="height" secondItem="0up-0L-7ku" secondAttribute="width" id="5v9-Fd-7Yt"/>
+                                    <constraint firstItem="iG0-Gi-Qje" firstAttribute="width" secondItem="0up-0L-7ku" secondAttribute="width" id="ZeH-wh-kv7"/>
+                                    <constraint firstItem="gIF-Ma-ESn" firstAttribute="height" secondItem="0up-0L-7ku" secondAttribute="height" id="cSu-IR-sOV"/>
+                                    <constraint firstItem="iG0-Gi-Qje" firstAttribute="height" secondItem="0up-0L-7ku" secondAttribute="width" id="hWK-JY-Dq0"/>
+                                    <constraint firstItem="gIF-Ma-ESn" firstAttribute="width" secondItem="0up-0L-7ku" secondAttribute="width" id="xan-dt-Sp6"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAe-n0-VpK">
-                                <rect key="frame" x="20" y="788" width="374" height="64"/>
+                                <rect key="frame" x="20" y="494" width="280" height="64"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="R5z-Wf-OJ4"/>
@@ -68,6 +63,8 @@
                             <constraint firstItem="zhm-i2-Red" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Qr0-dj-dQJ"/>
                             <constraint firstItem="zhm-i2-Red" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U70-2x-ZOH"/>
                             <constraint firstItem="BAe-n0-VpK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XPL-4x-8Ao"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zhm-i2-Red" secondAttribute="trailing" constant="110" id="mkK-2r-itz"/>
+                            <constraint firstItem="zhm-i2-Red" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="muz-Af-THN"/>
                         </constraints>
                     </view>
                     <connections>
