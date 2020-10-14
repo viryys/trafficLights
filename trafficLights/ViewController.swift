@@ -36,23 +36,21 @@ class TrafficLightsViewController: UIViewController {
 
     @IBAction func clickButton(_ sender: Any) {
         if (redView.backgroundColor == UIColor.red) {
-            redView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.5)
             UIView.animate(withDuration: 0.3, animations: {
+              self.redView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.5)
               self.yellowView.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 1)
-              self.greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
             })
         } else if (yellowView.backgroundColor == UIColor.yellow) {
-            redView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.5)
             UIView.animate(withDuration: 0.3, animations: {
               self.yellowView.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.5)
               self.greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
             })
         } else if (greenView.backgroundColor == UIColor.green) {
             UIView.animate(withDuration: 0.3, animations: {
+              self.greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
               self.redView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
-              self.yellowView.backgroundColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.5)
             })
-            greenView.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
+            
         } else {
             UIView.animate(withDuration: 0.3, animations: {
               self.redView.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
